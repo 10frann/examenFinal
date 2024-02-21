@@ -1,0 +1,11 @@
+<div class="producto">
+    <div class="image">
+        <img [src]="producto.image" alt="" width="400rem">
+    </div>
+    <div class="datos">
+        <p>{{producto.title | uppercase}}</p>
+        <p style="font-size: 30px;"> {{producto.price}} € </p>
+        <p> {{producto.description}} </p>
+        <p> {{producto.category}} </p>
+    </div>
+</div>

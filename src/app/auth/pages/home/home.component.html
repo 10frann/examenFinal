@@ -1,0 +1,14 @@
+<app-sidemenu></app-sidemenu>
+<div class="productos">
+    <div *ngFor="let item of productos" class="producto">
+        <div class="image">
+            <img [src]="item.image" alt="">
+        </div>
+        <p> {{item.price}} € </p>
+        <a [routerLink]="['/auth/home', item.id]"> {{item.title | uppercase}} </a>
+    </div>
+</div>
+<div class="botones">
+    <button (click)="loadPreviusPage()">Anterior página</button>
+    <button (click)="loadNextPage()">Siguiente página</button>
+</div>

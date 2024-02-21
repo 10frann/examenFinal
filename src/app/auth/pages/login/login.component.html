@@ -1,0 +1,28 @@
+<div class="form">
+    <h1>Inicia Sesión</h1>
+    <div class="row">
+        <div class="col">
+            <form autocomplete="off" [formGroup]="form">
+                <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label">Correo: </label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" placeholder="EMAIL " formControlName="email" #email>
+                        <span *ngIf="isValidField('email')" class="form-text text-danger"> {{ getFieldError('email') }} </span>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-4 col-form-label">Contraseña: </label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" placeholder="PASSWORD " formControlName="password" #password>
+                        <span *ngIf="isValidField('password')" class="form-text text-danger"> {{ getFieldError('password') }} </span>
+                    </div>
+                </div>
+                <div class="mb-0 row">
+                    <div class="col-sm-2">
+                        <input type="button" value="Iniciar Sesión" class="btn btn-primary" (click)="login()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
